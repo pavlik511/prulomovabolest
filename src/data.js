@@ -3,7 +3,7 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Landing',
+      text: 'Home',
       links: [
         {
           text: 'Sass',
@@ -58,7 +58,7 @@ export const headerData = {
     },
   ],
   actions: [
-    { type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
+    //{ type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
   ],
 };
   

@@ -12,9 +12,9 @@ const CONFIG = {
     '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
   defaultImage: defaultImage,
 
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: 'light:only', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
-  language: 'en',
+  language: 'cs',
   textDirection: 'ltr',
 
   dateFormatter: new Intl.DateTimeFormat('en', {
@@ -38,19 +38,19 @@ const CONFIG = {
     },
 
     list: {
-      pathname: 'blog', // Blog main path, you can change this to "articles" (/articles)
+      pathname: 'clanky', // Blog main path, you can change this to "articles" (/articles)
       noindex: false,
       disabled: false,
     },
 
     category: {
-      pathname: 'category', // Category main path /category/some-category
+      pathname: 'kategorie', // Category main path /category/some-category
       noindex: true,
       disabled: false,
     },
 
     tag: {
-      pathname: 'tag', // Tag main path /tag/some-tag
+      pathname: 'tagy', // Tag main path /tag/some-tag
       noindex: true,
       disabled: false,
     },
