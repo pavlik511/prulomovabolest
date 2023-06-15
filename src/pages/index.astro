@@ -4,7 +4,8 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import H1 from "~/components/mojekomponenty/H1.astro";
 //import H2 from "~/components/mojekomponenty/H2.astro";
-
+import { Image } from "@astrojs/image/components";
+import Bolest from "~/assets/images/bolest1.png";
 import P from "~/components/mojekomponenty/P.astro";
 import Note from '~/components/widgets/Note.astro';
 
@@ -28,23 +29,26 @@ const meta = {
 </div>
 
 <div class="container1">
-  
     <P>S tímto závažným fenoménem přicházejí nejčastěji do styku onkologičtí pacienti – jedná se o obtížně zvladatelný záchvat bolesti, která mimořádně rychle nastupuje a svou intenzitou vysoce převyšuje dosud poznané bolestivé stavy. U nemocných se objevují stavy deprese a úzkosti a v mnoha případech i nespokojenost se stávající léčbou, což má za následek i častější návštěvy u lékaře.</P>
-    <img
-    src="src/assets/images/bolest1.png"
-    alt="obr. prulomova bolest"
-    width="240"
-    height="60"
-    />
+    <div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1">
     <P>S <strong>průlomovou bolestí</strong> už naštěstí dokážeme bojovat. Čeští pacienti mají od letošního roku k dispozici opravdu moderní a účinné léky. Na našich stránkách bychom vám rádi poskytli důležité informace, které vám pomohou tuto závažnou a nepříjemnou komplikaci léčby bolesti zvládnout.</P>
+    <div class="obrazek">
+      <Image
+      src={Bolest}
+      width={290}
+      height={140}
+      alt={"obr. prulomova bolest"}
+      format={"png"}
+      />
+    </div>
+    </div>
     <P>Pokusíme se vám toto nejen mezi pacienty, ale i jejich lékaři nepříliš známé a opomíjené téma podrobněji představit, a pokud patříte mezi ohroženou skupinu pacientů, pak vám nabídneme řešení.</P>
   
 </div>
 
 <style>
-  img {
-    float: right;
-    margin: 2.5rem;
+  .obrazek {
+    margin: auto;
     
   }
   .container1 {

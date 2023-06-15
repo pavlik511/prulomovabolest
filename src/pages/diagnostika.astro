@@ -1,0 +1,143 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import H1 from "~/components/mojekomponenty/H1.astro";
+//import H2 from "~/components/mojekomponenty/H2.astro";
+import { Image } from "@astrojs/image/components";
+import Bolest3 from "~/assets/images/bolest3.jpeg";
+import P from "~/components/mojekomponenty/P.astro";
+import Note from '~/components/widgets/Note.astro';
+import H2 from "~/components/mojekomponenty/H2.astro";
+
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+
+---
+<Layout {meta}>
+    <!-- Hero Widget ******************* -->
+    <!-- 
+  <div class="w-full py-10">
+    <H1>Průlomová bolest</H1>
+  </div>
+  -->
+  <div class="w-full py-20 mb-10 bg-gradient-to-br from-slate-800 via-slate-400 to-red-600">
+    <H1>Vítejte na stránkách věnovaných problematice <strong>průlomových bolestí.</strong></H1>
+  </div>
+  
+  <div class="container1">
+    <nav>
+        <ul>
+            <li><a href="#diagnostika">Diagnostika</a></li>
+            <li><a href="#cileLecby">Cíle léčby</a></li>
+            <li><a href="#jakLecit">Jak léčit</a></li>
+            <li><a href="">Čím léčit</a></li>
+        </ul>
+        
+    </nav>
+    
+    <H2 id="diagnostika">Diagnostika</H2>
+      <div class="obrazek3">
+        <Image
+        src={Bolest3}
+        width={550}
+        height={250}
+        alt={"obr. prulomova bolest"}
+        format={"jpeg"}
+        />
+      </div>
+      <H2 id="cileLecby">Cíle léčby</H2>
+      <P>Cíle léčby <strong>průlomové bolesti</strong> jsou komplexní. Vždy by mělo jít o:</P>
+      <ol class=" pl-20">
+        <li>Co nejrychlejší a co nejúčinnější úlevu od šokujícího záchvatu bolesti.</li>
+        <li>Zlepšení emočního stavu nemocného.</li>
+        <li>Zajištění klidného a bezbolestného spánku.</li>
+        <li>Odstranění nebo zmírnění bolesti při tělesném klidu.</li>
+        <li>Odstranění nebo zmírnění bolesti při tělesné aktivitě.</li>
+        <li>Konečným cílem by mělo být dlouhodobé odstranění nebo výrazné zmírnění bolesti a dosažení co nejlepší kvality života nemocných.</li>
+      </ol>
+      <H2 id="jakLecit">Jak Léčit</H2>
+      <P>Základem úspěšné léčby průlomové bolesti je správně nastavená léčba základní bolesti, správná diagnostika, uplatněný komplexní přístup a v neposlední řadě správná volba konkrétního léku na průlomovou bolest.</P>
+      <H2>Ukázka správně a chybně zvoleného léku na průlomovou bolest</H2>
+      <p>tady jsou obrazky</p>
+      <P>Léky proti bolesti mohou být užívány různým způsobem a v různých formách. Můžeme je rozdělit podle způsobu podávání na neinvazivní a invazivní.</P>
+      <p class="font-bold pl-10 pb-2">Neinvazivně znamená:</p>
+      <ul class=" pl-20">
+        <li>Perorálně (klasické léky pro polknutí)</li>
+        <li>Sublinguálně (tabletka se rozpouští a vstřebává pod jazykem)</li>
+        <li>Rektálně (čípky do konečníku)</li>
+        <li class="pb-2">Nazálně (sprej do nosu)</li>
+      </ul>
+      <p class="font-bold pl-10 pb-2">Invazivně znamená:</p>
+      <ul class=" pl-20">
+        <li>blokády nervů</li>
+        <li>chirurgické výkony na drahách vedoucích bolest</li>
+        <li>jednorázové či dlouhodobé podávání léků přímo do páteřního kanálu</li>
+        <li>dlouhodobé podkožní, nebo nitrožilní podávání léků pomocí dávkovače</li>
+      </ul>
+      <P>Všechny tyto metody mohou vést k účinnému potlačení nádorové bolesti a tím i k výraznému zlepšení kvality života pacienta.</P>
+      <P>Vhodný lék pro průlomovou bolest by měl splňovat tyto základní předpoklady:</P>
+      <ul class=" pl-20">
+        <li>Rychlý účinek</li>
+        <li>Rychlé odeznění (aby nebyl pacient dlouho pod vlivem léku)</li>
+        <li>Silný analgetický efekt</li>
+        <li>Jednoduchá aplikace</li>
+        <li>Spolehlivá bezpečnost</li>
+      </ul>
+      <H2>Jak léčit</H2>
+      <P>K léčbě silných průlomových bolestí se standardně používají silná analgetika ze skupiny opioidů. Obavy ze vzniku závislosti jsou v léčbě průlomové bolesti zbytečné (více zde).</P>
+      <P>Novou efektivní možnost léčby průlomové bolesti představuje tzv. transmukózně podávaný fentanyl. V České republice jsou tyto léky dostupné od roku 2010. Transmukózní fentanyl vám může předepsat odborník na léčbu bolesti – algeziolog, specialista v obodru paliativní medicíny nebo onkolog, na kterého předepsání těchto nových léků může algeziolog delegovat.</P>
+      <P>Transmukózně znamená, že účinná látka (v tomto případě fentanyl) je vstřebávána přes sliznici (např. sublinguální). Nedochází tedy k nutnosti průchodu léku přes trávicí trakt, čímž je dosaženo velmi rychlého nástupu účinku. Zárověň nedochází k podráždění trávicího traktu.</P>
+      <P>K léčbě průlomové bolesti slouží tzv. záchranná medikace. Optimální léčba rychle působí a v ideálním případě je účinná po celou dobu trvání záchvatu průlomové bolesti. Způsoby podání mohou být různé:</P>
+      <ul class=" pl-20">
+        <li>sublinguální (lék se rozpustí pod jazykem)</li>
+        <li>orální</li>
+        <li>injekční</li>
+        <li>nosní</li>
+        <li>rektální</li>
+      </ul>
+      <P>Neléčená průlomová bolest má vážné důsledky pro pacienty, pro jejich okolí. Ze strachu z dalšího záchvatu průlomové bolesti pacienti ome- zují své fyzické aktivity, zůstávají více na lůžku a tím se zhoršuje jejich fyzická i psychická kondice. Strach z průlomové bolesti má za následek i prodloužení pobytu v nemocnici a tím se zvyšují i náklady na léčbu.</P>
+      <P>V případě velmi častých opakování průlomové bolesti by měl ošetřující lékař přehodnotit nastavenou léčbu základní bolesti.</P>
+  
+    </div>
+  
+  <style>
+    nav ul {
+        list-style-type: none; 
+        padding: 0;
+        margin: 0;
+    }
+    nav li {
+        display: block; 
+        padding: 10px 0px 0px 20px; 
+    }
+    nav a{
+        
+    text-decoration: underline;
+        
+    }
+    .obrazek3 {
+      margin: auto;
+      
+    }
+    .container1 {
+      width: 65%;
+      margin: auto;
+      border-radius: 8px;
+      background-color: rgb(219, 215, 215);
+    }
+    
+  </style>
+  
+    <!-- Note Widget ******************* -->
+  
+    <Note />
+  
+    <!-- Features Widget *************** -->
+  
+    
+  </Layout>

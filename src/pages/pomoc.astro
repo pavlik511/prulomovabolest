@@ -1,0 +1,56 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import H1 from "~/components/mojekomponenty/H1.astro";
+import H2 from "~/components/mojekomponenty/H2.astro";
+
+import P from "~/components/mojekomponenty/P.astro";
+import Note from '~/components/widgets/Note.astro';
+
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+  <!-- 
+<div class="w-full py-10">
+  <H1>Průlomová bolest</H1>
+</div>
+-->
+<div class="w-full py-20 mb-10 bg-gradient-to-br from-slate-800 via-slate-400 to-red-600">
+  <H1>Vítejte na stránkách věnovaných problematice <strong>průlomových bolestí.</strong></H1>
+</div>
+
+<div class="container1">
+    <P>V případě, že Vás trápí průlomová bolest, můžete se obrátit na specializovaná centra pro léčbu bolesti či ambulance léčby bolesti.</P>
+    <H2>Seznam pracovišť ve vašem okolí naleznete při kliknutí na Vámi požadovaný region.</H2>
+</div>
+
+<style>
+  .obrazek {
+    margin: auto;
+    
+  }
+  .container1 {
+    width: 65%;
+    margin: auto;
+    border-radius: 8px;
+    background-color: rgb(219, 215, 215);
+  }
+  
+</style>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  
+</Layout>

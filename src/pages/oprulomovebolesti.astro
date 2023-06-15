@@ -1,0 +1,75 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import H1 from "~/components/mojekomponenty/H1.astro";
+//import H2 from "~/components/mojekomponenty/H2.astro";
+import { Image } from "@astrojs/image/components";
+import Bolest2 from "~/assets/images/bolest2.png";
+import P from "~/components/mojekomponenty/P.astro";
+import Note from '~/components/widgets/Note.astro';
+
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+
+---
+<Layout {meta}>
+    <!-- Hero Widget ******************* -->
+    <!-- 
+  <div class="w-full py-10">
+    <H1>Průlomová bolest</H1>
+  </div>
+  -->
+  <div class="w-full py-20 mb-10 bg-gradient-to-br from-slate-800 via-slate-400 to-red-600">
+    <H1>Vítejte na stránkách věnovaných problematice <strong>průlomových bolestí.</strong></H1>
+  </div>
+  
+  <div class="container1">
+      <P><strong>Průlomová bolest</strong> je velmi silná bolest, která přichází náhle a rychle a maximální intenzity dosahuje v řádu několika minut (5 až 7). Záchvaty průlomové bolesti „prolamují“ účinky léků, které pacient užívá pro zmírnění chronické – „normální“ bolesti. Průlomová bolest je popisována jako nesnesitelně krutá bolest, která se objevuje 1-5x za den a trvá obvykle 20 až 40 minut. U nemocných se objevují stavy deprese a úzkosti a v mnoha případech i nespokojenost se stávající léčbou, což má za následek i častější návštěvy u lékaře.</P>
+      
+      <div class="obrazek2">
+        <Image
+        src={Bolest2}
+        width={400}
+        height={250}
+        alt={"obr. prulomova bolest"}
+        format={"png"}
+        />
+      </div>
+      
+      <P>Průlomová bolest se obecně nejčastěji vyskytuje u pacientů s nádorovým onemocněním, ti jsou také nejvíce ohroženi. Může být důsledkem:</P>
+      <ul class="list-disc pl-10">
+        <li>růstu nádoru</li>
+        <li>léčby nádoru</li>
+        <li>vzdálených metastáz</li>
+      </ul>
+
+
+  </div>
+  
+  <style>
+    .obrazek2 {
+      margin: auto;
+      
+    }
+    .container1 {
+      width: 65%;
+      margin: auto;
+      border-radius: 8px;
+      background-color: rgb(219, 215, 215);
+    }
+    
+  </style>
+  
+    <!-- Note Widget ******************* -->
+  
+    <Note />
+  
+    <!-- Features Widget *************** -->
+  
+    
+  </Layout>

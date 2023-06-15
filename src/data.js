@@ -1,61 +1,27 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
-      text: 'Home',
-      links: [
-        {
-          text: 'Sass',
-          href: getPermalink('/landing/saas'),
-        },
-        {
-          text: 'Startup',
-          href: getPermalink('/landing/startup'),
-        },
-        {
-          text: 'Mobile App',
-          href: getPermalink('/landing/mobile-app'),
-        },
-      ],
+      text: 'Domů',
+      href: "/index",
     },
     {
-      text: 'Pages',
-      links: [
-        {
-          text: 'Features',
-          href: '#',
-        },
-        {
-          text: 'Pricing',
-          href: '#',
-        },
-        {
-          text: 'About us',
-          href: '#',
-        },
-        {
-          text: 'Contact',
-          href: '#',
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('/privacy'),
-        },
-      ],
+      text: 'O průlomové bolesti',
+      href: "/oprulomovebolesti",
     },
     {
-      text: 'Widgets',
-      href: '#',
+      text: 'Diagnostika a léčba',
+      href: '/diagnostika',
     },
     {
-      text: 'Blog',
-      href: getBlogPermalink(),
+      text: 'Kde Vám pomohou',
+      href: "/pomoc",
     },
+    {
+      text: 'Otázky a odpovědi',
+      href: "/otazkyodpovedi",
+    }
   ],
   actions: [
     //{ type: 'button', text: 'Download', href: 'https://github.com/onwidget/astrowind' }
@@ -67,7 +33,7 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Features', href: '#' },
+        { text: 'Moje stránka', href: '/mojestranka' },
         { text: 'Security', href: '#' },
         { text: 'Team', href: '#' },
         { text: 'Enterprise', href: '#' },
