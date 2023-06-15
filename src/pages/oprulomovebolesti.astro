@@ -1,0 +1,106 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import H1 from '~/components/mojekomponenty/H1.astro';
+import H2 from '~/components/mojekomponenty/H2.astro';
+import { Image } from '@astrojs/image/components';
+import Bolest2 from '~/assets/images/bolest2.png';
+import Bolest3 from '~/assets/images/bolest3.png';
+import P from '~/components/mojekomponenty/P.astro';
+import Note from '~/components/widgets/Note.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+  <!-- 
+  <div class="w-full py-10">
+    <H1>Průlomová bolest</H1>
+  </div>
+  -->
+  <div class="w-full py-20 mb-10 bg-gradient-to-br from-slate-800 via-slate-400 to-red-600">
+    <H1>Vítejte na stránkách věnovaných problematice <strong>průlomových bolestí.</strong></H1>
+  </div>
+
+  <div class="container1">
+    <P>
+      <strong>Průlomová bolest</strong> je velmi silná bolest, která přichází náhle a rychle a maximální intenzity dosahuje
+      v řádu několika minut (5 až 7). Záchvaty průlomové bolesti <i>„prolamují“</i> účinky léků, které pacient užívá pro zmírnění
+      chronické – <i>„normální“</i> bolesti. <strong>Průlomová bolest</strong> je popisována jako nesnesitelně krutá bolest, která se objevuje 1 – 5×
+      za den a trvá obvykle 20 až 40 minut. U nemocných se objevují stavy deprese a úzkosti a v mnoha případech i nespokojenost
+      se stávající léčbou, což má za následek i častější návštěvy u lékaře.
+    </P>
+
+    <div class="obrazek2">
+      <Image src={Bolest2} width={650} height={400} alt={'obr. prulomova bolest'} format={'png'} />
+    </div>
+
+    <P>
+      <strong>Průlomová bolest</strong> se obecně nejčastěji vyskytuje u pacientů s nádorovým onemocněním, ti jsou také nejvíce ohroženi.
+      Může být důsledkem:
+    </P>
+    <ul class="list-disc pl-20">
+      <li>růstu nádoru</li>
+      <li>léčby nádoru</li>
+      <li>vzdálených metastáz</li>
+    </ul>
+    <P>
+      Základním pravidlem zůstává, že pokud se u pacienta objeví průlomová bolest nebo se její průběh zhorší, <strong>je nutné
+      co nejdříve vyhledat lékařskou pomoc.</strong>
+    </P>
+    <P>Každý pacient, který trpí průlomovou bolestí, má <strong>právo na její léčbu.</strong></P>
+    <H2>Rozlišujeme 3 základní druhy průlomové bolesti</H2>
+    <ul class="pl-10">
+      <li class="pt-5"><strong>Idiopatická</strong> – vyskytuje se nepředvídatelně, bez zjevné příčiny</li>
+      <li><strong>Incidentální</strong> – vyskytuje se při nebo po fyzické aktivitě, anebo je spojená s nějakou činností dělíme na:</li>
+      <li>
+        <ol class="list-decimal pl-10">
+          <li>předvídatelnou – vyvolaná volní aktivitou (pohyb, vyprazdňování, polykání…)</li>
+          <li>nepředvídatelnou – vyvolaná mimovolní aktivitou (kašel, škytání, křeče…)</li>
+        </ol>
+      </li>
+      <li><strong>Procedurální</strong> – spojená s léčebným nebo diagnostickým úkonem</li>
+    </ul>
+    <H2>Předvídatelnost vzniku průlomové bolesti</H2>
+    <P>
+      Určení času, kdy bude mít pacient ataku průlomové bolesti představuje velký problém. Velká část epizod průlomových
+      bolestí vzniká náhle, neočekávaně, bez zjevné příčiny. Je proto důležité, aby měl pacient pro tyto případy k
+      dispozici účinné léky, které potlačí nastupující ataku rychle.
+    </P>
+    <div class="obrazek2">
+      <Image src={Bolest3} width={500} height={250} alt={'obr. prulomova bolest'} format={'png'} />
+    </div>
+    <H2>Neléčená průlomová bolest</H2>
+    <P>Má výrazný negativní dopad na pacienty, jejich příbuzné, i na finanční zdroje.</P>
+    <ul class="list-disc pl-20">
+      <li>zvyšuje deprese, úzkosti a náklady na léčbu</li>
+      <li>zhoršuje kvalitu života</li>
+      <li class="pb-4">významně ovlivňuje běžné aktivity</li>
+    </ul>
+  </div>
+
+  <style>
+    .obrazek2 {
+      display: flex;
+      justify-content: center;
+    }
+    .container1 {
+      width: 65%;
+      margin: auto;
+      border-radius: 8px;
+      background-color: rgb(219, 215, 215);
+    }
+  </style>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+</Layout>

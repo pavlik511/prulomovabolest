@@ -1,0 +1,76 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import H1 from "~/components/mojekomponenty/H1.astro";
+import H2 from "~/components/mojekomponenty/H2.astro";
+
+import P from "~/components/mojekomponenty/P.astro";
+import Note from '~/components/widgets/Note.astro';
+
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+
+---
+<Layout {meta}>
+    <!-- Hero Widget ******************* -->
+    <!-- 
+  <div class="w-full py-10">
+    <H1>Průlomová bolest</H1>
+  </div>
+  -->
+  <div class="w-full py-20 mb-10 bg-gradient-to-br from-slate-800 via-slate-400 to-red-600">
+    <H1>Vítejte na stránkách věnovaných problematice <strong>průlomových bolestí.</strong></H1>
+  </div>
+  
+  <div class="container1">
+      <H2>JAK VYPADÁ ZÁCHVAT PRŮLOMOVÉ BOLESTI?</H2>
+      <ul class="list-disc pl-20">
+        <li class="pt-5">Průlomová bolest je nejčastěji spojována s onkologickým onemocněním a jeho důsledky (metastázami nebo léčbou)</li>
+        <li>Záchvat průlomové bolesti se vyznačuje rychlým nástupem a eskalací bolesti asi do 3 minut.</li>
+        <li>Bolest je silná až nesnesitelná, pacienty popisovaná i jako krutá, a to i přes užívání léků na zmírnění trvalé (chronické) bolesti.</li>
+        <li>Záchvaty se opakují až 5x denně a trvají v průměru 30 minut.</li>
+        <li>Jsou případy, kdy pacienti podcení léčbu průlomové bolesti, neupozorní lékaře na své problémy a zbytečně trpí.</li>
+        <li>Správná diagnóza a přístup jak ze strany lékaře ale i pacienta mohou výrazně přispět ke zmírnění problémů s průlomovou bolestí a zamezí tak výraznému zhoršení kvality života nemocného.</li>
+      </ul>
+      <H2>CO MÁM UDĚLAT, KDYŽ TO AKUTNĚ BOLÍ?</H2>
+      <P>Jestliže propukne záchvat průlomové bolesti, pak je nutné:</P>
+      <ol class="list-decimal pl-20">
+        <li>Pokud jste už něco podobného zažili – co nejrychleji užít osvědčený lék, který musíte mít neustále po ruce a následně vyhledat ošetřujícího lékaře.</li>
+        <li>Pokud něco takového zažíváte poprvé – co nejrychleji vyhledat ošetřujícího lékaře, který na základě vyhodnocení vašeho stavu – vaší bolesti – vybere nejvhodnější léčbu.</li>
+        <li>Následně je důležité informovat lékaře o účinnosti zvolené léčby a o jejích případných vedlejších účincích.</li>
+        <li>Na základě těchto informací pak může lékař rozhodnout, zda je třeba stávající terapii upravit nebo zvolit léčbu jinou.</li>
+        
+      </ol>
+<H2>CO MÁM UDĚLAT, POKUD OSVĚDČENÝ LÉK NEZABÍRÁ</H2>
+<P>Navštívit co nejdříve lékaře, aby mohl upravit Vaši léčbu.</P>
+<H2>CO MÁM UDĚLAT, KDYŽ JSEM TO UŽ ZAŽIL(A) A NECHCI TO ZAŽÍT ZNOVU?</H2>
+<P>Ambulantní pacienti by u sebe měli neustále nosit speciální léky (tzv. záchranná medikace).</P>
+<P>I přes rychlý nástup průlomové bolesti by se měli nemocní pokusit vypozorovat, co tomuto záchvatu předchází a na základě vypozorovaných objektivních příčin včas aplikovat lék, tj. asi 30 minut před záchvatem průlomové bolesti.</P>
+<P>Je jasné, že bolest lze ovlivnit medikací, je ale nutné uvědomit si další souvislosti. Bolest je mnohdy vyvolaná svalovým přepětím. Jeho příčinou často bývá stres, vyvolávaný právě průlomovou bolestí. Ten má za následek další svalové napětí, narušení prokrvování a dráždění nervových drah, což vede jen k dalšímu zhoršování situace. Součástí prevence tedy může být, pokud to stav pacienta dovolí, uvolňovací cvičení a techniky, akupunktura, meditace a aktivity, které pomohou uvolnit celý organismus – například poslech hudby, kreativní činnosti či jóga.</P>
+<P>V případě onkologických onemocnění je pacient vystaven velkému psychickému tlaku. Takové onemocnění je obrovským zásahem do jeho psychiky a strach a nejistota vyvolaná nemocí vede ke stavům úzkosti, později k depresím. Ke zvýšení kvality života pacienta výrazně připívají antidepresiva, která tlumí stavy úzkosti, pomáhají ke zlepšení spánku a pozitivnějšímu vnímání okolí. Tyto léky mají i vlastní, bolest tlumící účinek. Zlepšený psychický stav navíc pomůže lépe překonávat stavy bolesti, nemocný může užívat i méně léků proti bolesti a celkově díky tomu vede spokojenější život.</P>
+  </div>
+  
+  <style>
+    
+    .container1 {
+      width: 65%;
+      margin: auto;
+      border-radius: 8px;
+      background-color: rgb(219, 215, 215);
+    }
+    
+  </style>
+  
+    <!-- Note Widget ******************* -->
+  
+    <Note />
+  
+    <!-- Features Widget *************** -->
+  
+    
+  </Layout>

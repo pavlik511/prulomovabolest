@@ -1,0 +1,70 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import H1 from '~/components/mojekomponenty/H1.astro';
+//import H2 from "~/components/mojekomponenty/H2.astro";
+import { Image } from '@astrojs/image/components';
+import Bolest from '~/assets/images/bolest1.png';
+import P from '~/components/mojekomponenty/P.astro';
+import Note from '~/components/widgets/Note.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+  <!-- 
+<div class="w-full py-10">
+  <H1>Průlomová bolest</H1>
+</div>
+-->
+  <div class="w-full py-20 mb-10 bg-gradient-to-br from-slate-800 via-slate-400 to-red-600">
+    <H1>Vítejte na stránkách věnovaných problematice <strong>průlomových bolestí.</strong></H1>
+  </div>
+
+  <div class="container1">
+    <P>
+      S tímto závažným fenoménem přicházejí nejčastěji do styku onkologičtí pacienti – jedná se o obtížně zvladatelný
+      záchvat bolesti, která mimořádně rychle nastupuje a svou intenzitou vysoce převyšuje dosud poznané bolestivé
+      stavy. U nemocných se objevují stavy deprese a úzkosti a v mnoha případech i nespokojenost se stávající léčbou,
+      což má za následek i častější návštěvy u lékaře.
+    </P>
+    <!--<div class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1"></div>-->
+    <P>
+      S <strong>průlomovou bolestí</strong> už naštěstí dokážeme bojovat. Čeští pacienti mají od letošního roku k dispozici
+      opravdu moderní a účinné léky. Na našich stránkách bychom vám rádi poskytli důležité informace, které vám pomohou tuto
+      závažnou a nepříjemnou komplikaci léčby bolesti zvládnout.
+    </P>
+    <div class="obrazek">
+      <Image src={Bolest} width={290} height={140} alt={'obr. prulomova bolest'} format={'png'} />
+    </div>
+    <P>
+      Pokusíme se vám toto nejen mezi pacienty, ale i jejich lékaři nepříliš známé a opomíjené téma podrobněji
+      představit, a pokud patříte mezi ohroženou skupinu pacientů, pak vám nabídneme řešení.
+    </P>
+  </div>
+
+  <style>
+    .obrazek {
+      display: flex;
+      justify-content: center;
+    }
+    .container1 {
+      width: 65%;
+      margin: auto;
+      border-radius: 8px;
+      background-color: rgb(219, 215, 215);
+    }
+  </style>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+</Layout>
